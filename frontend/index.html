@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech Emotion Recognition</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel">
+        <div class="header">
+          <div>
+            <h1>Emotion Recognition through Speech</h1>
+          </div>
+          <span id="status" class="status">Checking model...</span>
+        </div>
+
+        <div class="meter" aria-hidden="true">
+          <span id="meterBar"></span>
+        </div>
+
+        <div class="controls">
+          <button id="recordBtn" class="primary">Record</button>
+          <button id="stopBtn" disabled>Stop</button>
+          <label class="upload-button" for="audioFile">Upload</label>
+          <input id="audioFile" type="file" accept="audio/*" />
+          <button id="predictBtn" disabled>Classify</button>
+        </div>
+
+        <audio id="preview" controls></audio>
+
+        <section class="result">
+          <p class="label">Detected emotion</p>
+          <h2 id="emotion">Waiting for speech</h2>
+        </section>
+
+        <div id="scores" class="scores"></div>
+      </section>
+    </main>
+    <script src="/app.js?v=6"></script>
+  </body>
+</html>
